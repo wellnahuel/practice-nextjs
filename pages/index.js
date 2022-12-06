@@ -8,9 +8,8 @@ import Layout from "../components/layout.js"
 
 export default function Home() {
   return (
-      <Layout title="Welcome">
-        dfgfgfgfgfgf
-        <div>Estas en index!</div>
-      </Layout>
+    <Layout title="Welcome">
+      <div>Estas en index!</div>
+    </Layout>
   );
 }
