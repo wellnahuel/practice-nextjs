@@ -1,0 +1,1 @@
+//cada vez que ponga en la ruta localhost3000/store se me carga el index.js de la carpeta store
