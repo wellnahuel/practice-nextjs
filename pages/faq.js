@@ -5,13 +5,10 @@ import Layout from "../components/layout.js"
 export default function FAQ() {
     return (
         <Layout>
-
             <h1>
                 FAQ
             </h1>
         </Layout>
-            
-        
     );
 }
 
