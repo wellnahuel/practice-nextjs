@@ -4,8 +4,22 @@ import style from "../styles/products.module.css"
 
 
 export default function Product({ item, showAs }) {
+    console.log(item)
     if (showAs === "Page") {
-        return <div>Page</div>
+        return (
+            <div>
+                <h2>{item.data.price}</h2>
+                <div className={style.image}>
+                    <Image
+                        src={item.data.image}
+                        alt="Picture of the author"
+                        width={800}
+                        height={800}
+                    />
+                </div>
+
+            </div>
+        )
     }
 
     if (showAs === "ListItem") {
