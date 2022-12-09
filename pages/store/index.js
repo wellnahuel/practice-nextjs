@@ -1,24 +1,24 @@
 //cada vez que ponga en la ruta localhost3000/store se me carga el index.js de la carpeta store
 import Layout from "../../components/layout.js"
 import { getItems } from "../../services/itemService.js";
+import Image from "next/legacy/image";
+import Product from "../../components/products"
+import styleItems from "../../styles/products.module.css"
 
 export default function Index({ items }) {
     return (
         <Layout>
-            <h1>
-                Store
-            </h1>
-            {
-                items && items.map((item) =>
-                    <div key={item.id}>
-                        {item.title}
-                    </div>
-                )
-            }
+            <h1>Store</h1>
+            <div className={styleItems.items}>
+            {items && items.map((item) => (
+                <Product key={item.id} item={item} showAs="Default" />
+            ))}
+            </div>
+
         </Layout>
     );
 }
-export async function getStaticProps() {
+export async function getStaticProps() {// el items del props lo paso destructurado como argumento de la funcion Index
     const res = await getItems();
     return {
         props: {

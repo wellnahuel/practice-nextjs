@@ -18,7 +18,7 @@ export default function handler(req, res) {
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia maiores praesentium vitae sequi consectetur itaque ea inventore architecto nemo. Enim id perspiciatis minus modi qui at commodi quos quisquam similique!",
     },
-    {
+     {
       id: 2,
       title: "Camiseta España",
       price: 200,
@@ -41,8 +41,8 @@ export default function handler(req, res) {
       image: "http://localhost:3000/img/trapo.png",
       description:
         "Give your desk nothing but the best and upgrade your coaster game with these all new environmentally-friendly bamboo Invertocat 2.0 Coasters. Includes four laser-etched coasters with coaster stand.",
-    },
-    {
+    }, 
+    /*  {
       id: 5,
       title: "Glow in the Dark Sticker Pack",
       price: 5,
@@ -65,6 +65,6 @@ export default function handler(req, res) {
       image: "http://localhost:3000/img/pullover01.webp",
       description:
         "While there’s nothing like an original black GitHub hoodie, these new pullover hoodies are an instant classic. Featuring tone-on-tone embroidered Invertocats on the chest and wrist, these understated hoodies will have you looking so fresh and so clean (and so warm!).",
-    },
+    },  */
   ]);
 }
