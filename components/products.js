@@ -15,13 +15,13 @@ export default function Product({ item, showAs }) {
     return (
         <div className={style.item}>
             <div>
-                <Link legacyBehavior href={`/store/url-a-mi-componenete`}>
+                <Link legacyBehavior href={`/store/${item.id}`}>
                     <a><Image src={item.image} alt={item.description} width="500" height="500" /></a>
                 </Link>
             </div>
             <div>
                 <h3>
-                    <Link legacyBehavior href={`/store/${item.id}`}>
+                    <Link legacyBehavior href={`/store/url-a-mi-componente`}>
                         <a>{item.title}</a>
                     </Link>
                 </h3>

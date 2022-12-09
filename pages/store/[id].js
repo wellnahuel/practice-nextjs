@@ -4,10 +4,12 @@ import { getItemData, getPathFromId } from "../../lib/utils"
 
 
 export default function ProductPage({ productInfo }) {
-    return
+    return (
     <Layout>
-        <Product item={productInfo} showAs="page"/>
+        <Product item={productInfo} showAs="Page"/>
     </Layout>
+
+    )
 }
 
 export async function getStaticPaths() {
