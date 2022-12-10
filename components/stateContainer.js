@@ -5,7 +5,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 const AppContext = createContext({
-    isOpen: true,
+    isOpen: false,
     items: [],
     openCart: () => { },
     closeCart: () => { },
@@ -52,7 +52,7 @@ export default function StateContainer({ children }) {
         isOpen,
         items,
         openCart: handleOpenCart,
-        closecart: handleCloseCart,
+        closeCart: handleCloseCart,
         addItemToCart: handleAddItemToCart,
         getNumberOfItems: handleNumberOfItems,
     }}>{children}

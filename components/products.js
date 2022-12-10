@@ -4,7 +4,7 @@ import style from "../styles/products.module.css"
 import { convertToPath } from "../lib/utils";
 
 
-export default function Product({ item, showAs }) {
+export default function Product({ item, showAs, quantity }) {
     console.log(item)
     if (showAs === "Page") {
         return (
