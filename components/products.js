@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/legacy/image";
 import style from "../styles/products.module.css"
 import { convertToPath } from "../lib/utils";
+import AddCartButton from "./addCartButton";
 
 
 export default function Product({ item, showAs, quantity }) {
@@ -24,7 +25,7 @@ export default function Product({ item, showAs, quantity }) {
                     <div className={style.price}>${item.data.price}</div>
                     <div>{item.data.description}</div>
                     <div>
-                        <button>Add to cart</button>
+                        <AddCartButton item={item} />
                     </div>
 
                 </div>
@@ -34,7 +35,24 @@ export default function Product({ item, showAs, quantity }) {
     }
 
     if (showAs === "ListItem") {
-        return <div>List item</div>
+        return (
+            <div className={style.listItem}>
+                <div>
+                    <Image
+                        src={item.image}
+                        alt="Picture of the author"
+                        width={70}
+                        height={70}
+                    />
+                </div>
+                <div>
+                    <div><h3>{item.title}</h3></div>
+                    <div>${item.price}</div>
+                    {quantity === 0 ? "" : <div>{quantity} units</div>}
+                    {quantity === 0 ? "" : <div>Subtotal:  ${quantity * item.price}</div>}
+                </div>
+            </div>
+        )
     }
 
     return (
@@ -53,7 +71,7 @@ export default function Product({ item, showAs, quantity }) {
             </div>
             <div>${item.price}</div>
             <div>
-                <button>Add to cart</button>
+                <AddCartButton item={item} />
             </div>
         </div>
     );

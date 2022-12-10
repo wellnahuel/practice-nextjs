@@ -14,7 +14,6 @@ export default function Index({ items }) {
                 <Product key={item.id} item={item} showAs="Default" />
             ))}
             </div>
-
         </Layout>
     );
 }
@@ -26,9 +25,6 @@ export async function getStaticProps() {// el items del props lo paso destructur
         },
     };
 }
-
-
-
 
 //getStaticProps reemplaza useEffect o fetch
 //NextJs me pide retornar un objeto que tenga la propiedad props, que inyectara en el componente Index

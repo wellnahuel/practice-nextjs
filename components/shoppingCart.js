@@ -1,5 +1,6 @@
 import style from "../styles/shoppingCart.module.css"
 import { useAppContext } from "./stateContainer"
+import Product from "./products";
 
 export default function ShoppingCart() {
     const cart = useAppContext(); //recordemos que como es un hook se debe colocar a nivel ''top'' de la funcion... si se coloca el cursor sobre cart aparecen los metodos que ya defini 
@@ -7,6 +8,11 @@ export default function ShoppingCart() {
     function handleCloseCart() {
         console.log(cart)
         cart.closeCart()
+    }
+
+    function getTotal(){
+        const total = cart.items.reduce((acc, item)=> acc + item.quantity * item.price, 0);
+        return total;
     }
 
     return (
@@ -24,6 +30,9 @@ export default function ShoppingCart() {
                         {cart.items.map((item) => (
                             <Product key={item.id} item={item} showAs="ListItem" quantity={item.quantity} />
                         ))}
+                    </div>
+                    <div className={style.total}>
+                        Total: ${getTotal()}
                     </div>
                 </>
             )}

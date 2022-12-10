@@ -30,6 +30,17 @@
   animation: scale 0.3s ease forwards;
 }
 
+.listItem {
+  display: flex;
+  gap: 10px;
+  border-bottom: solid 1px #ccc;
+  padding: 10px 0;
+}
+
+.listItem h3 {
+  margin: 2px 0px;
+}
+
 @keyframes scale {
   from {
     transform: scale(0);
@@ -55,3 +66,4 @@
   font-size: 28px;
   margin: 10px 0;
 }
+
