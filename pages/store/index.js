@@ -1,7 +1,7 @@
 //cada vez que ponga en la ruta localhost3000/store se me carga el index.js de la carpeta store
 import Layout from "../../components/layout.js"
 import { getItems } from "../../services/itemService.js";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Product from "../../components/products"
 import styleItems from "../../styles/products.module.css"
 

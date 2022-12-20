@@ -1,6 +1,7 @@
 export async function getItems() {
     const request = await fetch("http://localhost:3000/api/items");
     const items = await request.json(); //aca me guardo la respuesta de la llamada al json de items
+    console.log(items)
     return items; 
 }
 

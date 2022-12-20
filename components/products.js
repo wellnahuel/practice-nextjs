@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import style from "../styles/products.module.css"
 import { convertToPath } from "../lib/utils";
 import AddCartButton from "./addCartButton";
@@ -12,7 +12,7 @@ export default function Product({ item, showAs, quantity }) {
             <div className={style.page}>
                 <div className={style.image}>
                     <Image
-                        src={item.data.image}
+                        src={item.image}
                         alt="Picture of the author"
                         width={600}
                         height={600}
@@ -20,10 +20,10 @@ export default function Product({ item, showAs, quantity }) {
                 </div>
                 <div className={style.info}>
                     <div>
-                        <h2>{item.data.title}</h2>
+                        <h2>{item.title}</h2>
                     </div>
-                    <div className={style.price}>${item.data.price}</div>
-                    <div>{item.data.description}</div>
+                    <div className={style.price}>${item.price}</div>
+                    <div>{item.description}</div>
                     <div>
                         <AddCartButton item={item} />
                     </div>

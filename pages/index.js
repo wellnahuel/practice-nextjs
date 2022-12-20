@@ -39,7 +39,6 @@ export default function Home({ items }) {
 
 export async function getStaticProps(){
   const res = await getLatestItems();
-
   return {
     props:{
       items: res,
