@@ -5,9 +5,9 @@ import { convertToPath } from "../lib/utils";
 import AddCartButton from "./addCartButton";
 
 
-export default function Product({ item, showAs, quantity }) {
+export default function Product({ item, showAs, quantity = 0 }) {
     console.log(item)
-    if (showAs === "Page") {
+    if (showAs === "Page") { //ESTO ES EL DETAIL!!! 
         return (
             <div className={style.page}>
                 <div className={style.image}>
